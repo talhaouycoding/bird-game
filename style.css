@@ -1,0 +1,116 @@
+body {
+  display: flex;
+}
+
+#game {
+  width: 500px;
+  height: 730px;
+  position: absolute;
+  left: 80px;
+}
+
+.border_l {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+}
+
+.border_r {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  left: 580px;
+}
+
+.border_t {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  top: -50px;
+}
+
+.sky {
+  background-image: url("/images/game.png");
+  width: 500px;
+  height: 580px;
+  position: absolute;
+  border-radius: 10px;
+}
+
+.ground {
+  background-image: url("/images/ground-background.png");
+  width: 500px;
+  height: 150px;
+  position: absolute;
+  top: 580px;
+  z-index: +1;
+  border-radius: 10px;
+}
+
+#bird {
+  background-image: url("/images/bird.png");
+  position: absolute;
+  width: 60px;
+  height: 45px;
+  left: 220px;
+  bottom: 100px;
+}
+
+.obstacle {
+  background-image: url("/images/pipe.png");
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+.topObstacle {
+  background-image: url("/images/pipe.png");
+  transform: rotate(180deg);
+  width: 60px;
+  height: 300px;
+  position: absolute;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+.ground-container {
+  height: 150px;
+  width: 580px;
+  left: 80px;
+  position: absolute;
+}
+
+#ground_ {
+  position: absolute;
+  top: 580px;
+  height: 150px;
+  background-image: url("/images/ground-background.png");
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%;
+  z-index: +1;
+  border-radius: 10px;
+}
